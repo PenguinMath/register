@@ -8,7 +8,7 @@ async function checkEmail(email) {
 
   const options = {
     method: 'GET'
-  }
+  };
 
   const res = await fetch(url, options).then(res => res.json());
   console.log(res);
@@ -18,10 +18,10 @@ async function checkEmail(email) {
   if (res.data.valid) return true;
 
   return false;
-}
+};
 
 async function checkInfo(data) {
   return await checkEmail(data.owner.email);
-}
+};
 
 module.exports = checkInfo;
