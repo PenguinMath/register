@@ -7,7 +7,7 @@ async function addRecord(type, name, value) {
   const data = await response.json();
 
   return data;
-}
+};
 
 (async () => {
     try {
@@ -22,9 +22,9 @@ async function addRecord(type, name, value) {
 
         const res = await addRecord(recordType, name, value);
         console.log(res);
-      }
-    } catch(e) {
+      };
+    } catch(error) {
       console.log('Failed to add records.');
-      console.log(e);
-    }
+      console.log(error);
+    };
 })();
