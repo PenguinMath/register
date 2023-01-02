@@ -14,14 +14,14 @@ function getJSON(file, filename) {
       const rawdata = fs.readFileSync(path); // Read the file
       const data = JSON.parse(rawdata); // Parse it
       return data; // Return true or false, depending if tests pass or fail.
-    }
+    };
 
     return 3; // It doesn't exist
   } catch(err) {
     console.error(err);
-  }
+  };
 
   return 3;
-}
+};
 
 module.exports = getJSON; 
