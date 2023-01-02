@@ -7,13 +7,13 @@ function checkRecords(data) {
     
     if (recordType.toLowerCase() === 'a') {
         return checkIfValidIP(data.target[recordType].value);
-    }
+    };
 
     if (recordType.toLowerCase() === 'cname') {
         return checkIfValidFQDN(data.target[recordType].value);
-    }
+    };
 
     return false;
-}
+};
 
 module.exports = checkRecords;
